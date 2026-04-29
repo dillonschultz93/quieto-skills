@@ -26,25 +26,46 @@ cp -r design-token-* /path/to/your/project/.claude/skills/
 
 ### As a git subtree (recommended)
 
-This keeps the skills in sync with this repo:
+Use the included sync script to add, pull, and push skills:
 
 ```bash
-git subtree add --prefix=.claude/skills \
-  git@github.com:dillonschultz93/quieto-skills.git main --squash
+# Download the sync script
+curl -sO https://raw.githubusercontent.com/dillonschultz93/quieto-skills/main/scripts/sync.sh
+chmod +x sync.sh
+
+# Add skills to your repo
+./sync.sh add
+
+# Pull latest updates
+./sync.sh pull
+
+# Push local edits back upstream
+./sync.sh push
+
+# Custom prefix (default: .claude/skills/quieto-skills)
+./sync.sh add --prefix=.claude/skills/my-custom-path
 ```
 
-To pull updates later:
+Or run the git subtree commands directly:
 
 ```bash
-git subtree pull --prefix=.claude/skills \
+git subtree add --prefix=.claude/skills/quieto-skills \
   git@github.com:dillonschultz93/quieto-skills.git main --squash
-```
 
-To push local edits back upstream:
+git subtree pull --prefix=.claude/skills/quieto-skills \
+  git@github.com:dillonschultz93/quieto-skills.git main --squash
 
-```bash
-git subtree push --prefix=.claude/skills \
+git subtree push --prefix=.claude/skills/quieto-skills \
   git@github.com:dillonschultz93/quieto-skills.git main
+```
+
+### From `quieto-tokens` repo
+
+If you're working in the `quieto-tokens` repo, npm scripts are available:
+
+```bash
+npm run skills:pull   # Pull latest from quieto-skills
+npm run skills:push   # Push local edits back to quieto-skills
 ```
 
 ## Prerequisites
