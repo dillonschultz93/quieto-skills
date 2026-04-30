@@ -1,6 +1,6 @@
 {
   "name": "@quieto/skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Claude Code skills for the Quieto Tokens design token CLI",
   "bin": {
     "quieto-skills": "bin/cli.js"
@@ -22,6 +22,10 @@
     "quieto"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dillonschultz93/quieto-skills"
+  },
   "publishConfig": {
     "access": "public"
   },
