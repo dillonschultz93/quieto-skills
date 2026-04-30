@@ -7,7 +7,13 @@
   },
   "files": [
     "bin/",
-    "design-token-*/"
+    "design-token-audit/",
+    "design-token-category-add/",
+    "design-token-component/",
+    "design-token-contrast/",
+    "design-token-init/",
+    "design-token-migrate/",
+    "design-token-update/"
   ],
   "keywords": [
     "claude-code",
