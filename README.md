@@ -19,13 +19,13 @@
 ### npx (recommended)
 
 ```bash
-npx quieto-skills install
+npx @quieto/skills install
 ```
 
 This installs all skills into `.claude/skills/` in your current directory. You can also specify a target directory:
 
 ```bash
-npx quieto-skills install /path/to/your/project
+npx @quieto/skills install /path/to/your/project
 ```
 
 ### Manual
