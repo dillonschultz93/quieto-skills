@@ -16,6 +16,9 @@
     "quieto"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "changeset": "changeset",
     "version-packages": "changeset version && npm install --package-lock-only",
